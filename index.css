@@ -1,0 +1,61 @@
+/* Normal CSS */
+
+html, body{
+    width:100%;
+    height:100%;
+    background: -webkit-linear-gradient(#ef100b,#5e4a4a);
+    background: -o-linear-gradient(#ef100b,#5e4a4a);
+    background: -moz-linear-gradient(#ef100b,#5e4a4a);
+    background: linear-gradient(#ef100b,b#5e4a4a);
+}
+
+/* Nav bar CSS */
+.nav-center{
+    display: flex;
+    justify-content: center;
+}
+
+
+.nav{
+    font-family: Microsoft YaHei;
+    margin: 0 auto;
+	padding: 3em;
+	text-align: center;
+}
+
+.nav a{
+    color: #000;
+    text-decoration: none;
+    font: 20px Microsoft YaHei;
+    margin: 0px 10px;
+    padding: 9px 9px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+
+.border-out a:before, .border-out a:after{
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: #000;
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.border-out a:before{
+    top: 0px;
+    transform: translateY(10px);
+}
+
+.border-out a:after{
+    bottom: 0px;
+    transform: translateY(-10px);
+}
+
+.border-out a:hover:before, .border-out a:hover:after{
+    opacity: 1;
+    transform: translateY(0px);
+}
