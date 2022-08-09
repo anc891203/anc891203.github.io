@@ -3,59 +3,100 @@
 html, body{
     width:100%;
     height:100%;
-    background: -webkit-linear-gradient(#ef100b,#5e4a4a);
-    background: -o-linear-gradient(#ef100b,#5e4a4a);
-    background: -moz-linear-gradient(#ef100b,#5e4a4a);
-    background: linear-gradient(#ef100b,b#5e4a4a);
+    background: -webkit-linear-gradient(#828282,#E8C9FF);
+    background: -o-linear-gradient(#828282,#E8C9FF);
+    background: -moz-linear-gradient(#828282,#E8C9FF);
+    background: linear-gradient(#828282,#E8C9FF);
 }
 
-/* Nav bar CSS */
-.nav-center{
-    display: flex;
-    justify-content: center;
+h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 500;
+    line-height: 1.2;
 }
 
+.font-1{
+    font-weight: 1000;
+    color: black;
+}
+
+.font-2{
+    font-weight: 1000;
+    color: gray;
+}
+
+/* Nav bar */
 
 .nav{
+    display: flex;
+    justify-content: space-between;
     font-family: Microsoft YaHei;
-    margin: 0 auto;
-	padding: 3em;
-	text-align: center;
+	padding: 20px 0px;
+    width: 65%;
+}
+
+.nav-color{
+    background-color: #52797a;
 }
 
 .nav a{
-    color: #000;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font: 20px Microsoft YaHei;
     margin: 0px 10px;
     padding: 9px 9px;
     position: relative;
-    z-index: 0;
-    cursor: pointer;
 }
 
-.border-out a:before, .border-out a:after{
+.nav a:before, .nav a:after{
     position: absolute;
     left: 0px;
     width: 100%;
     height: 2px;
-    background: #000;
+    background: rgb(255, 255, 255);
     content: "";
     opacity: 0;
     transition: all 0.3s;
 }
 
-.border-out a:before{
+.nav a:before{
     top: 0px;
     transform: translateY(10px);
 }
 
-.border-out a:after{
+.nav a:after{
     bottom: 0px;
     transform: translateY(-10px);
 }
 
-.border-out a:hover:before, .border-out a:hover:after{
+.nav a:hover:before, .nav a:hover:after{
     opacity: 1;
     transform: translateY(0px);
+}
+
+/* Introduction */
+
+.intro{
+    width: 50%;
+    height: 800px;
+    margin-top: 100px;
+    padding: 50px;
+    border-radius: 20px;
+    border: 2px solid rgb(225, 221, 221);
+    text-align: left;
+}
+
+#headshot{
+    width: 200px;
+    margin: 20px 80px;
+    border-radius: 100px;
+    border: 1px solid rgb(89, 226, 206);
+}
+
+.info{
+    width: 320px;
+    margin: 20px;
+    text-align: center;
 }
